@@ -71,6 +71,11 @@ public class C2GameManager : MonoBehaviour
         {
             monitorText.text = "Make the floor completely transparent to continue.";
         }
+        if(clearFloor && !C2aStarted)
+            monitorText.text = "Lower the floor completely to continue.";
+        if (C2aFinished && !C2bStarted)
+            monitorText.text = "Raise the water level completely to continue.";
+
         if (C2aStarted && !C2aFinished)
         {
             if (!timerStarted)
